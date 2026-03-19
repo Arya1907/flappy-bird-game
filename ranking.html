@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Flappy Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="flappy.js" defer></script>
+  <link rel="icon" href="bird.jpeg" type="bird.jpeg">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="game.html">Play Game</a>
+        <a href="ranking.html" class="active">Rankings</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Register</a>
+        <a href="#" id="logoutBtn" class="nav-bar-btn">Log Out</a>
+    </nav>
+    <div class="content-wrapper">
+        <div class="ranking-container">
+            <h2>High Scores</h2>
+
+        <div id="rankingsList"></div>
+        </div>
+    </div>
+    <script>
+      document.getElementById('logoutBtn').onclick = function(e) {
+        e.preventDefault();
+        localStorage.removeItem('currentUser');
+        window.location.href = 'login.html';
+      };
+    </script>
+</body>
+</html>
+
+
+ 

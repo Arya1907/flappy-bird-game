@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="flappy.js"></script>
+    <link rel="icon" href="bird.jpeg" type="image/jpeg">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="game.html">Play Game</a>
+        <a href="ranking.html">Rankings</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html" class="active">Register</a>
+        <a href="#" id="logoutBtn" class="nav-bar-btn">Log Out</a>
+    </nav>
+    <div class="content-wrapp">
+        <h1>Register Here</h1>
+        <div id="message-box"></div>
+        <div id="success-message" class="notification"></div>
+
+    <form id="registration-form">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter phone number" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer-not">Prefer not to say</option>
+            </select>
+        </div>
+       
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+        
+
+        
+        
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+</div>
+</div>
+<script>
+  document.getElementById('logoutBtn').onclick = function(e) {
+    e.preventDefault();
+    localStorage.removeItem('currentUser');
+    window.location.href = 'login.html';
+  };
+</script>
+</body> 
+</html >
